@@ -21,7 +21,7 @@ $(document).ready(function(){
 
       let total_txt_words=text.split(' ').length;
 
-      let appended_words=lm_words_array.slice(total_txt_words, (parseFloat(total_txt_words)+parseFloat(lm_word)));
+      let appended_words=lm_words_array.slice(0, (parseFloat(0)+parseFloat(lm_word)));
       let appended_words_str=appended_words.join(" ");
       let final_string=text+' '+appended_words_str;
       let current_words_count=final_string.split(' ');
