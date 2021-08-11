@@ -1,0 +1,27 @@
+let a=[1,2,3,4];
+let b=[2,3,6,6,7];
+let c=[5,4,2,9,9];
+
+//function func2(){
+  func([a,b,c]);
+//}
+function func(args){
+	let duplicates=[];
+    let iterated=[];
+	for(let i=0;i<args.length;i++){
+    	let iterated_sub=[];
+    	for(let j=0;j<args[i].length;j++){
+        	if(iterated.includes(args[i][j])){
+                duplicates.push(args[i][j]);
+            }
+            else{
+                iterated_sub.push(args[i][j]);
+            }
+        }
+        for(let k=0;k<iterated_sub.length;k++){
+        	iterated.push(iterated_sub[k]);
+        }
+        
+    }
+    alert(duplicates);
+}
